@@ -11,7 +11,7 @@ export class AppComponent {
   input:string = '0';
   result:string = '0';
 
-//Gurada la primera tecla presionada
+//Guarda la primera tecla presionada
 numPress(num:string) {
   if (this.input=="0"){
     this.input = num;
@@ -21,24 +21,7 @@ numPress(num:string) {
 }
 }
 
-
-
-// getLastOperand() {
-
-//   let position:number;
-
-//   position=this.input.toString().lastIndexOf("+")
-
-//   if (this.input.toString().lastIndexOf("-") > position) position =this.input.lastIndexOf("-")
-
-//   if (this.input.toString().lastIndexOf("*") > position) position=this.input.lastIndexOf("*")
-
-//   if (this.input.toString().lastIndexOf("/") > position) position=this.input.lastIndexOf("/")
-
-
-//   return this.input.substr(position+1)
-// }
-
+//Guarda el segundo operador
 pressOperator(op: string) {
 
   const lastKey = this.input[this.input.length - 1];
@@ -51,17 +34,20 @@ pressOperator(op: string) {
   this.calcAnswer();
 }
 
+//Borra un elemento de la operación
 clear() {
   if (this.input !="" ) {
     this.input=this.input.substr(0, this.input.length-1)
   }
 }
 
+//Borra todos las operaciones y el resultado
 allClear() {
   this.result = '0';
   this.input = '0';
 }
 
+//Hace la operación
 calcAnswer() {
   let formula = this.input;
 
@@ -80,6 +66,7 @@ calcAnswer() {
   this.result = eval(formula);
 }
 
+//Devuelve el resultado
 getAnswer() {
   this.calcAnswer();
   this.input = this.result;
