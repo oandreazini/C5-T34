@@ -1,0 +1,19 @@
+
+.button-operation{
+  background-color: rgba(0, 195, 255, 0.207);
+  border-radius: 0%;
+}
+
+.button-number{
+  background-color: rgba(207, 160, 59, 0.496);
+  border-radius: 0%;
+
+}
+
+.form-control-lg
+{
+background-color: antiquewhite;
+border: 20%;
+border-color: black;
+border-radius: 0%;
+}

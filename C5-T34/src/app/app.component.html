@@ -1,0 +1,60 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!--Calculator-->
+<div class="container-fluid" style="width: 450px" class="border border-dark border-4 ">
+  <div class="col-12">
+    <div  class=" form-control-lg text-lg-right" type="text" >{{input}}</div>
+  </div>
+  <div class="col-12">
+    <div class=" form-control-lg text-lg-right" type="text">{{result}}</div>
+  </div>
+
+  <div class="row">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="col-1 btn btn-outline button-operation"(click)="allClear()">DEL</button>
+      <button type="button" class="col-1 btn btn-outline button-operation" (click)="clear()">C</button>
+      <button type="button" class="col-1 btn btn-outline button-operation">CE</button>
+      <button type="button" class="col-1 btn btn-outline button-operation" (click)="pressOperator('/')">/</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('9')">9</button>
+      <button type="button" class="col-1 btn btn-outline button-number"(click)="numPress('8')">8</button>
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('7')">7</button>
+      <button type="button" class="col-1 btn btn-outline button-operation" (click)="pressOperator('*')">*</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('6')">6</button>
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('5')">5</button>
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('4')">4</button>
+      <button type="button" class="col-1 btn btn-outline button-operation" (click)="pressOperator('+')">+</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('3')">3</button>
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('2')">2</button>
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('1')">1</button>
+      <button type="button" class="col-1 btn btn-outline button-operation" (click)="pressOperator('-')">-</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="col-1 btn btn-outline button-operation" (click)="numPress('.')">.</button>
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('0')">0</button>
+      <button type="button" class="col-1 btn btn-outline button-number" (click)="numPress('00')">00</button>
+      <button type="button" class="col-1 btn btn-outline button-operation"  (click)="getAnswer()">=</button>
+    </div>
+  </div>
+</div>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
